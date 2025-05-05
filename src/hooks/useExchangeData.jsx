@@ -18,8 +18,8 @@ const useExchangeData = () => {
                 throw new Error("Oops, something went wrong")
              }
 
-             const data = response.json()
-             setExchanges(data)
+             const data = await response.json();
+             setExchanges(data);
              setLoading(false);
         }
         catch(err){
